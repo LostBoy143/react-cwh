@@ -76,3 +76,12 @@ main {
   padding: 10px;
   border-radius: 12px;
 }
+.hero-section {
+  height: 400;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
