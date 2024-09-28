@@ -1,6 +1,7 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
+
+import TextForm from "./Components/TextForm";
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
         title="TextUtils"
         about="About us"
       />
-      <Hero />
+      <div className="container my-3 mt-5">
+        <TextForm heading="Enter the text to analyze" />
+      </div>
     </>
   );
 }

@@ -10,15 +10,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.button {
-  padding: 10px 20px;
-  background-color: red;
-  color: white;
-  border: none;
-  cursor: pointer;
-  height: 30px;
-  margin-left: 100px;
-}
+
 .box {
   height: 300px;
   width: 300px;
@@ -36,52 +28,17 @@
   background-color: whitesmoke;
   padding: auto;
 }
-.hero-section {
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.192);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .navbar-brand {
   font-weight: 900;
   color: rgb(106, 7, 113);
 }
-main {
-  display: flex;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 3rem;
-  background-color: rgb(27, 26, 26);
+
+body {
+  background-color: #121212;
+  color: rgb(135, 130, 130);
 }
-.text-input {
-  height: 200px;
-  width: 50%;
-  background-color: white;
-  padding: 10px;
-  border-radius: 12px;
-  outline: none;
-}
-.my-btn {
-  width: 150px;
-  border-width: 2px;
-}
-.output {
-  height: 200px;
-  width: 50%;
-  background-color: white;
-  padding: 10px;
-  border-radius: 12px;
-}
-.hero-section {
-  height: 400;
-  width: 100%;
-  background-color: black;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+.main-heading {
+  color: #00bcd4;
+  margin-bottom: 10px;
 }
