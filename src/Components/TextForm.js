@@ -19,6 +19,11 @@ export default function TextForm(props) {
     let newText = "";
     setText(newText);
   };
+  const speak = () => {
+    let msg = new SpeechSynthesisUtterance();
+    msg.text = text;
+    window.speechSynthesis.speak(msg);
+  };
   return (
     <>
       <div className="container">
@@ -44,6 +49,13 @@ export default function TextForm(props) {
             onClick={handleLowClick}
           >
             Convert to Lowercase
+          </button>
+          <button
+            type="submit"
+            onClick={speak}
+            className="btn btn-warning mx-1 mt-3"
+          >
+            Speak
           </button>
           <button
             className="btn btn-info mt-3 mx-1"
