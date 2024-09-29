@@ -14,7 +14,7 @@ function App() {
     } else {
       setMode("dark");
       document.body.style.backgroundColor =
-        "grey";
+        "#192724";
     }
   };
   return (

@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 export default function Navbar(props) {
   return (
     <nav
-      className={`navbar navbar-expand-lg px-3 navbar-${props.mode} bg-${props.mode}`}
+      className={`navbar navbar-expand-lg px-0 navbar-${props.mode} bg-${props.mode}`}
+      style={{ boxShadow: "2px 2px 5px black" }}
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="/">

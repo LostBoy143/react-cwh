@@ -35,7 +35,7 @@ export default function TextForm(props) {
   return (
     <>
       <div
-        className="container"
+        className="container my-3 mt-5"
         style={{
           color:
             props.mode === "light"
@@ -57,7 +57,7 @@ export default function TextForm(props) {
               backgroundColor:
                 props.mode === "light"
                   ? "white"
-                  : "black",
+                  : "#242124",
               color:
                 props.mode === "light"
                   ? "black"
@@ -126,7 +126,7 @@ export default function TextForm(props) {
         </p>
       </div>
       <div
-        className="container my-4 mb-10"
+        className="container my-4 mb-5"
         style={{
           color:
             props.mode === "light"
@@ -135,7 +135,11 @@ export default function TextForm(props) {
         }}
       >
         <h2 className="main-heading">Preview</h2>
-        <p>{text}</p>
+        <p>
+          {text.length > 0
+            ? text
+            : "Enter your text to preview"}
+        </p>
       </div>
     </>
   );
