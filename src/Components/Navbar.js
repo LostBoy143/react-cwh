@@ -18,6 +18,7 @@ export default function Navbar(props) {
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          style={{ transform: "scale(0.7)" }}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
