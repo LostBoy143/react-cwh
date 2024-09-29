@@ -24,9 +24,25 @@ export default function TextForm(props) {
     msg.text = text;
     window.speechSynthesis.speak(msg);
   };
+  const handleCopy = () => {
+    navigator.clipboard.writeText(text);
+    alert("Text copied to clipboard");
+  };
+  const removeSpace = () => {
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
+  };
   return (
     <>
-      <div className="container">
+      <div
+        className="container"
+        style={{
+          color:
+            props.mode === "light"
+              ? "black"
+              : "white",
+        }}
+      >
         <h1 className="main-heading">
           {props.heading}
         </h1>
@@ -37,6 +53,16 @@ export default function TextForm(props) {
             value={text}
             rows="7"
             onChange={handleChange}
+            style={{
+              backgroundColor:
+                props.mode === "light"
+                  ? "white"
+                  : "black",
+              color:
+                props.mode === "light"
+                  ? "black"
+                  : "white",
+            }}
           ></textarea>
           <button
             className="btn btn-primary mt-3 mx-1"
@@ -63,9 +89,29 @@ export default function TextForm(props) {
           >
             Clear text
           </button>
+          <button
+            className="btn btn-danger mt-3 mx-1"
+            onClick={handleCopy}
+          >
+            Copy Text
+          </button>
+          <button
+            className="btn btn-primary mt-3 mx-1"
+            onClick={removeSpace}
+          >
+            Remove extra spaces
+          </button>
         </div>
       </div>
-      <div className="container my-4">
+      <div
+        className="container my-4"
+        style={{
+          color:
+            props.mode === "light"
+              ? "black"
+              : "white",
+        }}
+      >
         <h2 className="main-heading">
           Your Text Summary
         </h2>
@@ -79,7 +125,15 @@ export default function TextForm(props) {
           read
         </p>
       </div>
-      <div className="container my-4 mb-10">
+      <div
+        className="container my-4 mb-10"
+        style={{
+          color:
+            props.mode === "light"
+              ? "black"
+              : "white",
+        }}
+      >
         <h2 className="main-heading">Preview</h2>
         <p>{text}</p>
       </div>
