@@ -10,27 +10,47 @@ export default function TextForm(props) {
   const handleUpClick = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert(
+      "Converted to uppercase!",
+      "success"
+    );
   };
   const handleLowClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert(
+      "Converted to lowercase!",
+      "success"
+    );
   };
   const handleClearClick = () => {
     let newText = "";
     setText(newText);
+    props.showAlert(
+      "Cleared the text area",
+      "success"
+    );
   };
   const speak = () => {
     let msg = new SpeechSynthesisUtterance();
     msg.text = text;
     window.speechSynthesis.speak(msg);
+    props.showAlert("Listen the text", "success");
   };
   const handleCopy = () => {
     navigator.clipboard.writeText(text);
-    alert("Text copied to clipboard");
+    props.showAlert(
+      "Text copied to clipboard",
+      "success"
+    );
   };
   const removeSpace = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert(
+      "Removed extra spaces",
+      "success"
+    );
   };
   return (
     <>
